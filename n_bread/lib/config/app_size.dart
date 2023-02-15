@@ -16,6 +16,9 @@ class AppSize {
 }
 
 extension DoubleExtension on double {
-  double get proportionateWidth =>
-      (this / AppSize.baseWidth) * AppSize.screenWidth;
+  double get w => (this / AppSize.baseWidth) * AppSize.screenWidth;
+}
+
+extension IntExtension on int {
+  double get w => (this / AppSize.baseWidth) * AppSize.screenWidth;
 }
