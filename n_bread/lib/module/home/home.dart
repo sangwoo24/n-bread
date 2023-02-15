@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:n_bread/config/app_size.dart';
 import 'package:n_bread/global/widget/sized_asset.dart';
+import 'package:n_bread/global/widget/space.dart';
 import 'package:n_bread/module/home/components/home_header.dart';
+import 'package:n_bread/module/home/components/settlement_list_tile.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -40,7 +42,18 @@ class Home extends StatelessWidget {
       bottom: false,
       child: Column(
         children: [
+          Space(height: 20),
           HomeHeader(onAddButtonPressed: () {}),
+          Expanded(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.w),
+              child: Column(
+                children: [
+                  SettlementListTile(),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
